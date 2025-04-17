@@ -1,4 +1,3 @@
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -28,6 +27,48 @@ const Index = () => {
         <h2 className="mb-12 text-4xl font-bold text-gray-900 text-center">
           Latest <span className="text-purple-600">Stories</span>
         </h2>
+        
+        {/* Main Featured Post */}
+        <div className="mb-12">
+          <article className="group rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="h-[400px] overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+                  alt="Featured Tech Blog"
+                  className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 mb-4 w-fit">
+                  Featured
+                </span>
+                <h3 className="mb-4 text-3xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                  The Evolution of Modern Web Development
+                </h3>
+                <p className="mb-6 text-gray-600 line-clamp-3">
+                  Discover how web development has transformed over the years and what the future holds for developers in an AI-driven world.
+                </p>
+                <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                      alt="Author"
+                      className="w-10 h-10 rounded-full"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">Alex Thompson</p>
+                      <p>Lead Developer</p>
+                    </div>
+                  </div>
+                  <span>8 min read</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        {/* Grid of Stories */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Featured Post 1 */}
           <article className="group rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1">
@@ -119,6 +160,97 @@ const Index = () => {
                 <span>Mike Johnson</span>
               </div>
               <span>6 min read</span>
+            </div>
+          </article>
+
+          {/* Additional Stories */}
+          <article className="group rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-4 h-56 overflow-hidden rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                alt="Tech Blog"
+                className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-700 mb-4">
+              Architecture
+            </span>
+            <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+              Microservices vs Monoliths
+            </h3>
+            <p className="mb-4 text-gray-600 line-clamp-2">
+              Analyzing the pros and cons of different architectural approaches in modern applications.
+            </p>
+            <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+                  alt="Author"
+                  className="w-8 h-8 rounded-full"
+                />
+                <span>Sarah Chen</span>
+              </div>
+              <span>6 min read</span>
+            </div>
+          </article>
+
+          <article className="group rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-4 h-56 overflow-hidden rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+                alt="Tech Blog"
+                className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-rose-100 text-rose-700 mb-4">
+              Career
+            </span>
+            <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+              Remote Work Revolution
+            </h3>
+            <p className="mb-4 text-gray-600 line-clamp-2">
+              How the shift to remote work is reshaping the tech industry and developer careers.
+            </p>
+            <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                  alt="Author"
+                  className="w-8 h-8 rounded-full"
+                />
+                <span>Marcus Kim</span>
+              </div>
+              <span>4 min read</span>
+            </div>
+          </article>
+
+          <article className="group rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-4 h-56 overflow-hidden rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                alt="Tech Blog"
+                className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700 mb-4">
+              Productivity
+            </span>
+            <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+              Developer Tools in 2025
+            </h3>
+            <p className="mb-4 text-gray-600 line-clamp-2">
+              Essential tools and technologies that will shape the future of development.
+            </p>
+            <div className="flex items-center justify-between text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+                  alt="Author"
+                  className="w-8 h-8 rounded-full"
+                />
+                <span>Rachel Torres</span>
+              </div>
+              <span>7 min read</span>
             </div>
           </article>
         </div>
