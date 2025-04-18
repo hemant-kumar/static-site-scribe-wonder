@@ -1,20 +1,20 @@
 
-import { toast as sonnerToast } from "sonner"
+import { toast as sonnerToast, type Toast } from "sonner";
 
 type ToastProps = {
-  title?: string
-  description?: string
+  title?: string;
+  description?: string;
   action?: {
-    label: string
-    onClick: () => void
-  }
+    label: string;
+    onClick: () => void;
+  };
   // Add other sonner toast properties
-  id?: string
-  duration?: number
-  icon?: React.ReactNode
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center'
-  variant?: 'default' | 'destructive' | 'success' | 'info' | 'warning'
-}
+  id?: string;
+  duration?: number;
+  icon?: React.ReactNode;
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'top-center' | 'bottom-center';
+  variant?: 'default' | 'destructive' | 'success' | 'info' | 'warning';
+};
 
 const useToast = () => {
   const toast = ({ title, description, action, ...props }: ToastProps) => {
@@ -27,15 +27,13 @@ const useToast = () => {
           }
         : undefined,
       ...props,
-    })
-  }
+    });
+  };
 
-  // We're not using the radix UI toast functionality that needs toasts array
-  // Instead we'll make sure all components use the sonner toast
-  return { toast }
-}
+  return { toast };
+};
 
-export { useToast, type ToastProps }
+export { useToast, type ToastProps };
 
 // For convenience, also export a global toast function
 export const toast = ({ title, description, action, ...props }: ToastProps) => {
@@ -48,5 +46,5 @@ export const toast = ({ title, description, action, ...props }: ToastProps) => {
         }
       : undefined,
     ...props,
-  })
-}
+  });
+};

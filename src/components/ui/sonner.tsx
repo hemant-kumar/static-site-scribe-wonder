@@ -1,12 +1,15 @@
 
-import { Toaster as Sonner, toast } from "sonner"
+"use client";
 
-type ToasterProps = React.ComponentProps<typeof Sonner>
+import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react";
 
-// Simplified version without next-themes dependency
+type ToasterProps = React.ComponentProps<typeof SonnerToaster>;
+
+// Fix the component definition to be a proper React functional component
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
-    <Sonner
+    <SonnerToaster
       className="toaster group"
       toastOptions={{
         classNames: {
@@ -21,7 +24,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Toaster, toast }
+// Fix export to avoid direct export from sonner that might cause hook issues
+export { Toaster };
+export { toast } from "sonner";
