@@ -1,13 +1,51 @@
 
-export const post1 = {
-  id: 1,
+export const java_a101 = {
+  id: 'java_a101',
   title: "Java 11 Features: What Every Developer Should Know",
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
   content: `
-    <p>Java 11, released in September 2018, marked the second Long-Term Support (LTS) version after Java 8. It brought several key improvements and changes that every Java developer should be aware of. Whether you're upgrading from Java 8 or just curious, here’s a rundown of the most impactful features.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java 11 Features: What Every Developer Should Know</title>
+  <meta name="description" content="Explore the top features of Java 11 including HTTP client API, String enhancements, and more." />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <p>Java 11, released in September 2018, marked the second Long-Term Support (LTS) version after Java 8. It brought several key improvements and changes that every Java developer should be aware of. Whether you're upgrading from Java 8 or just curious, here’s a rundown of the most impactful features.</p>
 
   <section>
     <h2>1. <code>var</code> in Lambda Parameters</h2>
@@ -83,6 +121,9 @@ String content = Files.readString(path);</pre>
     <p>Java 11 is a powerful, stable upgrade from Java 8, bringing modern features, better performance, and a more streamlined API. With long-term support, it’s a great choice for both enterprise and personal projects.</p>
     <p><strong>Are you still on Java 8?</strong> Now's the time to upgrade.</p>
   </section>
+
+</body>
+</html>
 
   `
 };
