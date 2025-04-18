@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+pre {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+code {
+  background: #eee;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+section {
+  margin-bottom: 2rem;
+}
