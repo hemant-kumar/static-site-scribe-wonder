@@ -30,7 +30,7 @@ const Blog = () => {
               <div className="flex items-center justify-between text-sm text-gray-500">
                 <div className="flex items-center gap-2">
                   <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                    src="/author.png"
                     alt={post.author}
                     className="w-8 h-8 rounded-full"
                   />

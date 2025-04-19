@@ -1,9 +1,9 @@
 
 const Authors = () => {
   const authors = [
-    { name: "John Doe", role: "Lead Developer", posts: 15, image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" },
-    { name: "Jane Smith", role: "UI/UX Designer", posts: 12, image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80" },
-    { name: "Mike Johnson", role: "AI Researcher", posts: 8, image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" },
+    { name: "John Doe", role: "Lead Developer", posts: 15, image: "/author.png" },
+    { name: "Jane Smith", role: "UI/UX Designer", posts: 12, image: "/author.png" },
+    { name: "Mike Johnson", role: "AI Researcher", posts: 8, image: "/author.png" },
   ];
 
   return (

@@ -49,7 +49,7 @@ const BlogPost = () => {
             <div className="flex items-center justify-between text-gray-500">
               <div className="flex items-center gap-3">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                  src="/author.png"
                   alt="Author"
                   className="w-10 h-10 rounded-full"
                 />
