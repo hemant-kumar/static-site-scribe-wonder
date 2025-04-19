@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { getAllBlogPosts } from '../utils/blogUtils';
+import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 
 const Blog = () => {
   const posts = getAllBlogPosts();
@@ -36,7 +36,7 @@ const Blog = () => {
                   />
                   <span>{post.author}</span>
                 </div>
-                <span>{post.readTime}</span>
+                <span>{estimateReadingTime(post.content)} min read</span>
               </div>
             </article>
           ))}

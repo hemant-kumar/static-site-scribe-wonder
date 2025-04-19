@@ -1,7 +1,7 @@
 
 import { useParams } from 'react-router-dom';
 import { FileText } from "lucide-react";
-import { getBlogPost } from '../utils/blogUtils';
+import { getBlogPost, estimateReadingTime } from '../utils/blogUtils';
 import { useToast } from '@/hooks/use-toast';
 
 const BlogPost = () => {
@@ -58,7 +58,7 @@ const BlogPost = () => {
                   <p className="text-sm">{post.date}</p>
                 </div>
               </div>
-              <span className="text-sm">{post.readTime}</span>
+              <span className="text-sm">{estimateReadingTime(post.content)} min read</span>
             </div>
           </div>
 

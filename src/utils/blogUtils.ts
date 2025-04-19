@@ -68,3 +68,10 @@ export const getBlogPost = (id: string): BlogPost | undefined => {
 export const getAllBlogPosts = (): BlogPost[] => {
   return Object.values(blogPosts);
 };
+
+export const estimateReadingTime = (html) => {
+  const text = html.replace(/<[^>]+>/g, ''); // Strip HTML tags
+  const charCount = text.length;
+  const minutes = Math.ceil(charCount / 1125);
+  return minutes;
+}
