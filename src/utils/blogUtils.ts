@@ -1,3 +1,4 @@
+
 import { java_a101 } from '../data/blogPosts/java/java_a101';
 import { java_a102 } from '../data/blogPosts/java/java_a102';
 import { java_a103 } from '../data/blogPosts/java/java_a103';
@@ -65,7 +66,12 @@ export const getBlogPost = (id: string): BlogPost | undefined => {
 };
 
 export const getAllBlogPosts = (): BlogPost[] => {
-  return Object.values(blogPosts);
+  // Convert to array and sort by date (newest first)
+  return Object.values(blogPosts).sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateB - dateA;
+  });
 };
 
 export const estimateReadingTime = (html) => {
