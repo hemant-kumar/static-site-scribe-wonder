@@ -2,19 +2,26 @@
 import { Link } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 import { useEffect } from "react";
+import { getAllBlogPosts } from '../utils/blogUtils';
 
 const Categories = () => {
-  const categories = [
-    { name: "Development", count: 12, color: "purple" },
-    { name: "Design", count: 8, color: "blue" },
-    { name: "AI & ML", count: 6, color: "green" },
-    { name: "Career", count: 5, color: "rose" },
-    { name: "Architecture", count: 4, color: "indigo" },
-    { name: "Productivity", count: 7, color: "emerald" },
-  ];
+  // Get all blog posts and extract unique categories with post counts
+  const posts = getAllBlogPosts();
+  const categoryData = posts.reduce((acc, post) => {
+    if (!acc[post.category]) {
+      acc[post.category] = { count: 0, color: getRandomColor() };
+    }
+    acc[post.category].count++;
+    return acc;
+  }, {} as Record<string, { count: number, color: string }>);
+
+  const categories = Object.entries(categoryData).map(([name, data]) => ({
+    name,
+    count: data.count,
+    color: data.color
+  }));
 
   useEffect(() => {
-    // Display a welcome toast when the categories page loads
     toast({
       title: "Categories Loaded",
       description: "Browse through our article categories",
@@ -22,7 +29,12 @@ const Categories = () => {
     });
   }, []);
 
-  // Helper function to get safe color classes that won't have build issues
+  // Helper function to get color classes
+  function getRandomColor() {
+    const colors = ["purple", "blue", "green", "rose", "indigo", "emerald"];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
   const getCategoryColorClasses = (color: string) => {
     const colorMap: Record<string, { bg: string, text: string }> = {
       purple: { bg: "bg-purple-100", text: "text-purple-700" },
