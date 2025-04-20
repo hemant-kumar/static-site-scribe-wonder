@@ -1,8 +1,8 @@
-
 import { useParams } from 'react-router-dom';
 import { FileText } from "lucide-react";
 import { getBlogPost, estimateReadingTime } from '../utils/blogUtils';
 import { useToast } from '@/hooks/use-toast';
+import Meta from '../components/Meta';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -25,50 +25,59 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
-      <div className="container mx-auto px-4">
-        <article className="max-w-3xl mx-auto">
-          {/* Hero Image */}
-          <div className="mb-8 h-[400px] overflow-hidden rounded-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Article Header */}
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-purple-600 mb-4">
-              <FileText size={20} />
-              <span className="text-sm font-medium">{post.category}</span>
+    <>
+      <Meta 
+        title={`${post.title} - Tech Chatter Box`}
+        description={post.content.replace(/<[^>]*>/g, '').slice(0, 160)}
+        keywords={post.keywords}
+        type="article"
+        imageUrl="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
+        <div className="container mx-auto px-4">
+          <article className="max-w-3xl mx-auto">
+            {/* Hero Image */}
+            <div className="mb-8 h-[400px] overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              {post.title}
-            </h1>
-            <div className="flex items-center justify-between text-gray-500">
-              <div className="flex items-center gap-3">
-                <img
-                  src="/author.png"
-                  alt="Author"
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="font-medium text-gray-900">{post.author}</p>
-                  <p className="text-sm">{post.date}</p>
-                </div>
+
+            {/* Article Header */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 text-purple-600 mb-4">
+                <FileText size={20} />
+                <span className="text-sm font-medium">{post.category}</span>
               </div>
-              <span className="text-sm">{estimateReadingTime(post.content)} min read</span>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                {post.title}
+              </h1>
+              <div className="flex items-center justify-between text-gray-500">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/author.png"
+                    alt="Author"
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="font-medium text-gray-900">{post.author}</p>
+                    <p className="text-sm">{post.date}</p>
+                  </div>
+                </div>
+                <span className="text-sm">{estimateReadingTime(post.content)} min read</span>
+              </div>
             </div>
-          </div>
 
-          {/* Article Content */}
-          <div 
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-        </article>
+            {/* Article Content */}
+            <div 
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </article>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

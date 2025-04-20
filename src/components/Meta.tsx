@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { metaConfig } from "../config/metaConfig";
 

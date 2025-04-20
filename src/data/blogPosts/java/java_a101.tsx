@@ -6,6 +6,18 @@ export const java_a101 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java 11",
+    "Java Updates",
+    "Java Features for Developers",
+    "New Java Features",
+    "Java Programming",
+    "Java Development",
+    "Java Features",
+    "Java 11 Guide",
+    "Java Tutorials",
+    "Java Programming Tips"
+  ],
   content: `
     <!DOCTYPE html>
 <html lang="en">
@@ -127,3 +139,4 @@ String content = Files.readString(path);</pre>
 
   `
 };
+
