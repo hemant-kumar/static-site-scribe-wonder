@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 
@@ -6,7 +5,7 @@ const Blog = () => {
   const posts = getAllBlogPosts();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 py-16">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">All Blog Posts</h1>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

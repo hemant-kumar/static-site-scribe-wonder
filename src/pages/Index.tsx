@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 
@@ -10,11 +9,11 @@ const Index = () => {
   const recentPosts = allPosts.slice(1, 7);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Hero Section with animated gradient text */}
       <header className="relative px-4 py-32 text-center overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(120deg,#84fab0,#8fd3f4)] opacity-5"></div>
-        <h1 className="relative mb-6 text-7xl font-bold tracking-tight bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent animate-fade-in">
+        <h1 className="relative mb-6 text-7xl font-bold tracking-tight bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent animate-fade-in">
           The Developer's
           <br /> 
           <span className="text-8xl">Journal</span>
@@ -23,19 +22,19 @@ const Index = () => {
           Where code meets creativity. Exploring the intersection of technology, design, and the future of web development.
         </p>
         <div className="flex justify-center gap-4 animate-fade-in">
-          <Link to="/blog" className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-medium hover:opacity-90 transition-all hover:scale-105">
+          <Link to="/blog" className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full font-medium hover:opacity-90 transition-all hover:scale-105">
             Start Reading
           </Link>
-          <button className="px-8 py-3 bg-white text-gray-800 rounded-full font-medium border border-gray-200 hover:border-purple-300 transition-all hover:scale-105">
+          <button className="px-8 py-3 bg-white text-gray-800 rounded-full font-medium border border-gray-200 hover:border-green-300 transition-all hover:scale-105">
             Subscribe
           </button>
         </div>
       </header>
 
-      {/* Featured Posts Grid with enhanced design */}
+      {/* Featured Posts Grid */}
       <section className="mx-auto max-w-7xl px-4 pb-20">
         <h2 className="mb-12 text-4xl font-bold text-gray-900 text-center">
-          Latest <span className="text-purple-600">Stories</span>
+          Latest <span className="text-green-600">Stories</span>
         </h2>
         
         {/* Main Featured Post */}
@@ -51,11 +50,11 @@ const Index = () => {
                   />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 mb-4 w-fit">
+                  <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 mb-4 w-fit">
                     Featured
                   </span>
                   <Link to={`/blog/${featuredPost.id}`}>
-                    <h3 className="mb-4 text-3xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                    <h3 className="mb-4 text-3xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
                       {featuredPost.title}
                     </h3>
                   </Link>
@@ -93,11 +92,11 @@ const Index = () => {
                   className="h-full w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700 mb-4">
+              <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 mb-4">
                 {post.category}
               </span>
               <Link to={`/blog/${post.id}`}>
-                <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
                   {post.title}
                 </h3>
               </Link>
@@ -120,19 +119,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Newsletter Section with enhanced design */}
+      {/* Newsletter Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 skew-y-3 transform origin-bottom-right"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 skew-y-3 transform origin-bottom-right"></div>
         <div className="relative mx-auto max-w-2xl px-4 text-center">
           <h2 className="mb-4 text-4xl font-bold text-white">Never Miss a Post</h2>
-          <p className="mb-8 text-purple-100">Join our newsletter and get the latest articles delivered straight to your inbox.</p>
+          <p className="mb-8 text-green-100">Join our newsletter and get the latest articles delivered straight to your inbox.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full max-w-sm rounded-full px-6 py-3 text-gray-900 shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-300"
+              className="w-full max-w-sm rounded-full px-6 py-3 text-gray-900 shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
             />
-            <button className="px-8 py-3 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition-colors shadow-xl hover:scale-105 transform transition-transform duration-200">
+            <button className="px-8 py-3 bg-white text-green-600 rounded-full font-medium hover:bg-gray-100 transition-colors shadow-xl hover:scale-105 transform transition-transform duration-200">
               Subscribe
             </button>
           </div>
