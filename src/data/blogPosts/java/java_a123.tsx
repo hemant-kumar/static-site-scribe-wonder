@@ -6,6 +6,16 @@ export const java_a123 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Deep Learning Camera",
+    "Real-Time Object Detection",
+    "Image Recognition Java",
+    "Real-Time Image Recognition",
+    "Live Image Processing",
+    "AI with Webcam",
+    "Computer Vision",
+    "Camera Input AI"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

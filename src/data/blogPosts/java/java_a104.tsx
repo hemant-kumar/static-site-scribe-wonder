@@ -6,6 +6,18 @@ export const java_a104 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java 21 Features",
+    "Java 21 Performance",
+    "Java 21",
+    "Foreign Function API Java 21",
+    "Java Security Manager Removal",
+    "Project Loom",
+    "Java 21 JEPs",
+    "Java Virtual Threads",
+    "Record Patterns",
+    "Pattern Matching Java 21"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

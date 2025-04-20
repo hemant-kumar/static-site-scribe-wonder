@@ -6,6 +6,16 @@ export const java_a118 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "AI with Spring Boot",
+    "Java ML",
+    "Spring Boot AI",
+    "Spring Boot Machine Learning",
+    "Java AI",
+    "ML with Spring Boot",
+    "AI Integration Java",
+    "REST API for AI"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

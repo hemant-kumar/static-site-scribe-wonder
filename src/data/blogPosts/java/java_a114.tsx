@@ -6,6 +6,17 @@ export const java_a114 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Reactive Systems Java",
+    "Project Reactor",
+    "Reactive Programming",
+    "RxJava",
+    "Java Reactive Programming",
+    "Java Functional Programming",
+    "RxJava vs Project Reactor",
+    "Reactive Streams Java",
+    "Java Async Programming"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

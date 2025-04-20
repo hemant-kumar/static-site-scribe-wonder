@@ -6,6 +6,18 @@ export const java_a115 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Non-blocking REST API",
+    "Project Reactor",
+    "Java WebFlux",
+    "Java Reactive Systems",
+    "Spring WebFlux",
+    "Reactive Programming Java",
+    "Spring Boot",
+    "Spring WebFlux Tutorial",
+    "Building REST APIs",
+    "Reactive REST API"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

@@ -6,6 +6,18 @@ export const java_a113 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "JBang",
+    "Java Scripting Tools",
+    "JBang vs JShell",
+    "Java Scripting Comparison",
+    "JShell Tutorial",
+    "Kotlin Scripting",
+    "Java Command Line Tools",
+    "Java vs Kotlin",
+    "Kotlin for Scripting",
+    "JShell"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

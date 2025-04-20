@@ -6,6 +6,17 @@ export const java_a124 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java 21 Features",
+    "Lightweight Threads",
+    "Virtual Threads",
+    "Project Loom Java",
+    "Project Loom",
+    "Java Virtual Threads",
+    "Java Scalability",
+    "Java Concurrency",
+    "Java Threading Model"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

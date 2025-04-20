@@ -6,6 +6,17 @@ export const java_a107 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java Functional Programming",
+    "map() vs flatMap()",
+    "Java Stream map()",
+    "Stream Transformation in Java",
+    "Java Streams",
+    "Java Stream flatMap()",
+    "Java 8 Streams",
+    "Java Stream Operations",
+    "Java Streams API"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

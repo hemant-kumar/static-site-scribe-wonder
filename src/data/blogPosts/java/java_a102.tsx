@@ -6,6 +6,18 @@ export const java_a102 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Lambda Expressions",
+    "Streams API",
+    "Java 8 Date API",
+    "Java 8 Updates",
+    "Java 8 Features",
+    "Java 8 Nashorn",
+    "Date and Time API",
+    "Java 8 Streams",
+    "Default Methods Java 8",
+    "Java 8"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

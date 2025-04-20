@@ -6,6 +6,18 @@ export const java_a105 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java 25 JEPs",
+    "Project Panama",
+    "Virtual Machine Changes Java 25",
+    "Virtual Threads Java 25",
+    "Java 25 Features",
+    "Project Loom",
+    "Pattern Matching Java 25",
+    "Java Records Enhancements",
+    "Sealed Types Java 25",
+    "Java 25"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

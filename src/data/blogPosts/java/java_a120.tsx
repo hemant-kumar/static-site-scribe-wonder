@@ -6,6 +6,16 @@ export const java_a120 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Personalized Recommendations",
+    "Machine Learning Recommenders",
+    "Collaborative Filtering",
+    "Recommendation Systems",
+    "AI Recommendation Systems",
+    "Java Recommendation Systems",
+    "Recommender Algorithms",
+    "Content-Based Filtering"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

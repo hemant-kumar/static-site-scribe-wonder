@@ -6,6 +6,18 @@ export const java_a103 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Pattern Matching Java 17",
+    "Java 17 Updates",
+    "Java 17 Security",
+    "Java 17",
+    "Java 17 JEPs",
+    "Sealed Classes",
+    "Pseudo-Random Number Generators Java 17",
+    "Java 17 Features",
+    "Java Performance",
+    "Java macOS Rendering"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

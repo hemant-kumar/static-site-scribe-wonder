@@ -6,6 +6,18 @@ export const java_a112 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "JBang",
+    "Java Productivity Tools",
+    "Java Scripts",
+    "Java Scripting",
+    "Scripting with Java",
+    "Rapid Java Prototyping",
+    "JBang Tutorial",
+    "Java CLI Tools",
+    "Lightweight Java Development",
+    "Java Command Line Apps"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

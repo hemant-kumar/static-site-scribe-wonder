@@ -6,6 +6,16 @@ export const java_a119 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Hugging Face Java",
+    "Java Sentiment Analysis",
+    "Hugging Face Integration",
+    "NLP with Spring Boot",
+    "Hugging Face API",
+    "Sentiment Analysis",
+    "AI in Spring Boot",
+    "Spring Boot Sentiment Analysis"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

@@ -6,6 +6,18 @@ export const java_a108 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Java Best Practices",
+    "Lombok Annotations",
+    "Java Code Simplification",
+    "Lombok Tutorial",
+    "Reduce Boilerplate Java",
+    "Project Lombok",
+    "Java Development Tools",
+    "Lombok Java",
+    "Java Productivity",
+    "Java Annotations"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

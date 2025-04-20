@@ -6,6 +6,17 @@ export const java_a111 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Immutability in Java",
+    "Java Best Practices",
+    "Java Functional Constructs",
+    "Java Data Classes",
+    "Java 14 Records",
+    "Java Records Tutorial",
+    "Java Records",
+    "Java Functional Style",
+    "Functional Programming Java"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

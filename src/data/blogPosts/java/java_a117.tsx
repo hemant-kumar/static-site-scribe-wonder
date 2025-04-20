@@ -6,6 +6,15 @@ export const java_a117 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "OpenAI API",
+    "Spring Boot OpenAI",
+    "Spring Boot AI",
+    "ChatGPT API Java",
+    "Java OpenAI Integration",
+    "OpenAI Java Client",
+    "OpenAI with Spring Boot"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

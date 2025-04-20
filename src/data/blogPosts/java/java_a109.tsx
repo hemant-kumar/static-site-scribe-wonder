@@ -6,6 +6,18 @@ export const java_a109 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Testing Lombok Classes",
+    "Lombok and JUnit",
+    "Java Test Automation",
+    "Java Testing Best Practices",
+    "Test Lombok Getters Setters",
+    "Unit Testing Java",
+    "Java Development",
+    "Lombok Tutorial",
+    "Lombok Java",
+    "Java Annotations"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

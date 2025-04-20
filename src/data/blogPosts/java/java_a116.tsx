@@ -6,6 +6,17 @@ export const java_a116 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "AI Development with Java",
+    "Java Neural Networks",
+    "Java and AI Integration",
+    "Java AI",
+    "Java Deep Learning",
+    "Java AI Frameworks",
+    "Java Machine Learning",
+    "Artificial Intelligence Java",
+    "AI Libraries in Java"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

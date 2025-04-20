@@ -6,6 +6,17 @@ export const java_a106 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Stream Processing in Java",
+    "Java Functional Programming",
+    "Java Lambda Expressions",
+    "Java Parallel Streams",
+    "Java Streams",
+    "Java 8 Streams",
+    "Java Stream Examples",
+    "Java Data Processing",
+    "Java Streams API"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

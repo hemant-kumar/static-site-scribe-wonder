@@ -6,6 +6,18 @@ export const java_a122 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Voice AI",
+    "AI Chatbots",
+    "AI in Communication",
+    "Chatbots",
+    "Voice Assistants",
+    "Conversational AI",
+    "Virtual Assistants",
+    "Chatbot Development",
+    "Speech Recognition AI",
+    "NLP Applications"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">

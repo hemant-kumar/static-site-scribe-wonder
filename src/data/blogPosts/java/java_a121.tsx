@@ -6,6 +6,17 @@ export const java_a121 = {
   date: "2025-04-13",
   category: "Java",
   readTime: "2 min read",
+  keywords: [
+    "Image Classification",
+    "TensorFlow Image Recognition",
+    "CNN Models",
+    "Deep Learning Frameworks",
+    "AI Image Processing",
+    "Image Recognition",
+    "Computer Vision",
+    "PyTorch Image Recognition",
+    "Deep Learning"
+  ],
   content: `
 <!DOCTYPE html>
 <html lang="en">
