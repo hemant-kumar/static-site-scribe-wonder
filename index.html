@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,12 +26,13 @@
     <!-- Base tag for proper routing -->
     <base href="/" />
     
-    <!-- Script to handle SPA redirects -->
+    <!-- Script to handle SPA redirects for GitHub Pages -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages or any static host
-      // This script checks if a redirect is needed and handles it
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
       (function(l) {
-        if (l.search[1] === '/' ) {
+        if (l.search[1] === '/') {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
