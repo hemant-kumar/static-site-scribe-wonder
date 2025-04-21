@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 import NewsletterSubscription from "../components/NewsletterSubscription";

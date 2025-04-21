@@ -12,6 +12,7 @@ const SearchBar: React.FC = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchTerm.trim()) {
+      // For GitHub Pages SPA, make sure we're using the proper path format
       navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
     }
   };

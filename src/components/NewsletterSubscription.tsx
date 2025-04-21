@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { subscribeToNewsletter } from "@/services/subscriptionService";
+import { Mail } from "lucide-react";
 
 interface NewsletterSubscriptionProps {
   className?: string;
@@ -14,16 +15,17 @@ const NewsletterSubscription: React.FC<NewsletterSubscriptionProps> = ({ classNa
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!email || !email.includes('@')) {
       return;
     }
 
     setIsSubmitting(true);
     try {
-      const success = await subscribeToNewsletter(email);
-      if (success) {
-        setEmail("");
-      }
+      await subscribeToNewsletter(email);
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting email:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -31,14 +33,17 @@ const NewsletterSubscription: React.FC<NewsletterSubscriptionProps> = ({ classNa
 
   return (
     <form onSubmit={handleSubmit} className={`flex flex-col sm:flex-row justify-center gap-4 ${className}`}>
-      <Input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="w-full max-w-sm rounded-full px-6 py-3 text-gray-900 shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
-        required
-      />
+      <div className="relative w-full max-w-sm">
+        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full rounded-full px-10 py-3 text-gray-900 shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300 pl-10"
+          required
+        />
+      </div>
       <Button
         type="submit"
         disabled={isSubmitting}
