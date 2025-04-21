@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 import Meta from '../components/Meta';
@@ -27,7 +28,7 @@ const Blog = () => {
                   />
                 </div>
                 <Link to={`/blog/${post.id}`} className="inline-block">
-                  <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                  <h3 className="mb-3 text-2xl font-semibold text-gray-900 group-hover:text-green-600 transition-colors">
                     {post.title}
                   </h3>
                 </Link>
