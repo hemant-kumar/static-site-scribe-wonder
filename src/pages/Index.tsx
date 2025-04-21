@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
 
@@ -9,14 +10,12 @@ const Index = () => {
   const recentPosts = allPosts.slice(1, 7);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Hero Section with animated gradient text */}
       <header className="relative px-4 py-32 text-center overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(120deg,#84fab0,#8fd3f4)] opacity-5"></div>
         <h1 className="relative mb-6 text-7xl font-bold tracking-tight bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent animate-fade-in">
-          The Developer's
-          <br /> 
-          <span className="text-8xl">Journal</span>
+          Tech Chatter Box
         </h1>
         <p className="mx-auto mb-12 max-w-2xl text-xl text-gray-600 leading-relaxed animate-fade-in">
           Where code meets creativity. Exploring the intersection of technology, design, and the future of web development.
@@ -120,7 +119,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="relative py-24">
+      <section className="relative py-24 mt-auto">
         <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 skew-y-3 transform origin-bottom-right"></div>
         <div className="relative mx-auto max-w-2xl px-4 text-center">
           <h2 className="mb-4 text-4xl font-bold text-white">Never Miss a Post</h2>
