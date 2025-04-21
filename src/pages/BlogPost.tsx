@@ -21,9 +21,9 @@ const BlogPost = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 py-16">
       <Helmet>
         <title>{post.title} - Tech Chatter Box</title>
-        <meta name="description" content={post.content.substring(0, 160)} />
+        <meta name="description" content={post.title} />
         <meta property="og:title" content={`${post.title} - Tech Chatter Box`} />
-        <meta property="og:description" content={post.content.substring(0, 160)} />
+        <meta property="og:description" content={post.title} />
         <meta name="keywords" content={post.keywords?.join(", ")} />
       </Helmet>
 

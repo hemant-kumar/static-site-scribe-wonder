@@ -59,7 +59,7 @@ const Index = () => {
                     </h3>
                   </Link>
                   <p className="mb-6 text-gray-600 line-clamp-3">
-                    {featuredPost.content.replace(/<[^>]*>/g, '').slice(0, 150)}...
+                    {featuredPost.content.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '').replace(/<[^>]*>/g, '').slice(0, 150)}...
                   </p>
                   <div className="flex items-center justify-between text-sm text-gray-500 mt-auto">
                     <div className="flex items-center gap-2">
