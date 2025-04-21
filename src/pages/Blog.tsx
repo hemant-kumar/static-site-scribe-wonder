@@ -33,7 +33,7 @@ const Blog = () => {
                   </h3>
                 </Link>
                 <p className="mb-4 text-gray-600 line-clamp-2">
-                  {post.content.replace(/<[^>]*>/g, '').slice(0, 150)}...
+                  {post.content.replace(/<[^>]*>/g, '').replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '').slice(0, 150)}...
                 </p>
                 <div className="flex items-center justify-between text-sm text-gray-500">
                   <div className="flex items-center gap-2">
