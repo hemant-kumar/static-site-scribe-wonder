@@ -23,13 +23,14 @@ import { java_a122 } from '../data/blogPosts/java/java_a122';
 import { java_a123 } from '../data/blogPosts/java/java_a123';
 import { java_a124 } from '../data/blogPosts/java/java_a124';
 
+import { ai_a101 } from '../data/blogPosts/ai/ai_a101';
+
 export interface BlogPost {
   id: string;
   title: string;
   author: string;
   date: string;
   category: string;
-  readTime: string;
   content: string;
   keywords?: string[];
 }
@@ -58,7 +59,8 @@ const blogPosts: Record<string, BlogPost> = {
   "java_a121": java_a121,
   "java_a122": java_a122,
   "java_a123": java_a123,
-  "java_a124": java_a124
+  "java_a124": java_a124,
+  "ai_a101": ai_a101
 };
 
 export const getBlogPost = (id: string): BlogPost | undefined => {

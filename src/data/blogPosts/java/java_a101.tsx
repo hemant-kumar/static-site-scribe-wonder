@@ -5,7 +5,6 @@ export const java_a101 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "Java 11",
     "Java Updates",

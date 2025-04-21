@@ -1,7 +1,7 @@
 
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { getBlogPost } from "../utils/blogUtils";
+import { getBlogPost, estimateReadingTime } from "../utils/blogUtils";
 import BlogComments from "@/components/BlogComments";
 
 const BlogPost = () => {
@@ -40,7 +40,7 @@ const BlogPost = () => {
             </div>
             <div className="flex gap-4">
               <span>{post.date}</span>
-              <span>{post.readTime} min read</span>
+              <span>{estimateReadingTime(post.content)} min read</span>
             </div>
           </div>
         </div>

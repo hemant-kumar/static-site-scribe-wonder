@@ -5,7 +5,6 @@ export const java_a107 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "Java Functional Programming",
     "map() vs flatMap()",

@@ -5,7 +5,6 @@ export const java_a103 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "Pattern Matching Java 17",
     "Java 17 Updates",

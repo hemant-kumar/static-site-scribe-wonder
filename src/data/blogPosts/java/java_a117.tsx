@@ -5,7 +5,6 @@ export const java_a117 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "OpenAI API",
     "Spring Boot OpenAI",

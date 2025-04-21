@@ -5,7 +5,6 @@ export const java_a123 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "Deep Learning Camera",
     "Real-Time Object Detection",

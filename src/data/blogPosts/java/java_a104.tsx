@@ -5,7 +5,6 @@ export const java_a104 = {
   author: "Hemant Kumar",
   date: "2025-04-13",
   category: "Java",
-  readTime: "2 min read",
   keywords: [
     "Java 21 Features",
     "Java 21 Performance",
