@@ -1,84 +1,58 @@
 
-import { useParams } from 'react-router-dom';
-import { FileText } from "lucide-react";
-import { getBlogPost, estimateReadingTime } from '../utils/blogUtils';
-import { useToast } from '@/hooks/use-toast';
-import Meta from '../components/Meta';
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { getBlogPost } from "../utils/blogUtils";
+import BlogComments from "@/components/BlogComments";
 
 const BlogPost = () => {
-  const { id } = useParams();
-  const { toast } = useToast();
+  const { id } = useParams<{ id: string }>();
   const post = getBlogPost(id || "");
 
   if (!post) {
-    toast({
-      title: "Post not found",
-      description: "The requested blog post could not be found.",
-      variant: "destructive"
-    });
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold text-gray-900">Post not found</h1>
-        </div>
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-3xl font-bold mb-6">Post not found</h1>
+        <p>The blog post you're looking for doesn't exist or has been removed.</p>
       </div>
     );
   }
 
   return (
-    <>
-      <Meta 
-        title={`${post.title} - Tech Chatter Box`}
-        description={post.content.replace(/<[^>]*>/g, '').slice(0, 160)}
-        keywords={post.keywords}
-        type="article"
-        imageUrl="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
-        <div className="container mx-auto px-4">
-          <article className="max-w-3xl mx-auto">
-            {/* Hero Image */}
-            <div className="mb-8 h-[400px] overflow-hidden rounded-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-                alt={post.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 py-16">
+      <Helmet>
+        <title>{post.title} - Tech Chatter Box</title>
+        <meta name="description" content={post.content.substring(0, 160)} />
+        <meta property="og:title" content={`${post.title} - Tech Chatter Box`} />
+        <meta property="og:description" content={post.content.substring(0, 160)} />
+        <meta name="keywords" content={post.keywords?.join(", ")} />
+      </Helmet>
 
-            {/* Article Header */}
-            <div className="mb-8">
-              <div className="flex items-center gap-2 text-purple-600 mb-4">
-                <FileText size={20} />
-                <span className="text-sm font-medium">{post.category}</span>
-              </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                {post.title}
-              </h1>
-              <div className="flex items-center justify-between text-gray-500">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/author.png"
-                    alt="Author"
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <div>
-                    <p className="font-medium text-gray-900">{post.author}</p>
-                    <p className="text-sm">{post.date}</p>
-                  </div>
-                </div>
-                <span className="text-sm">{estimateReadingTime(post.content)} min read</span>
-              </div>
+      <article className="container mx-auto px-4 max-w-3xl">
+        <div className="mb-8">
+          <span className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700 mb-4">
+            {post.category}
+          </span>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
+          <div className="flex items-center justify-between text-sm text-gray-600 mb-8">
+            <div className="flex items-center gap-3">
+              <img src="/author.png" alt={post.author} className="w-10 h-10 rounded-full" />
+              <span>{post.author}</span>
             </div>
-
-            {/* Article Content */}
-            <div 
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-          </article>
+            <div className="flex gap-4">
+              <span>{post.date}</span>
+              <span>{post.readTime} min read</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </>
+
+        <div className="prose prose-lg prose-green max-w-none">
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
+
+        {/* Blog Comments Component */}
+        <BlogComments />
+      </article>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { getAllBlogPosts, estimateReadingTime } from '../utils/blogUtils';
+import NewsletterSubscription from "../components/NewsletterSubscription";
 
 const Index = () => {
   const allPosts = getAllBlogPosts();
@@ -24,9 +25,9 @@ const Index = () => {
           <Link to="/blog" className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full font-medium hover:opacity-90 transition-all hover:scale-105">
             Start Reading
           </Link>
-          <button className="px-8 py-3 bg-white text-gray-800 rounded-full font-medium border border-gray-200 hover:border-green-300 transition-all hover:scale-105">
+          <a href="#newsletter" className="px-8 py-3 bg-white text-gray-800 rounded-full font-medium border border-gray-200 hover:border-green-300 transition-all hover:scale-105">
             Subscribe
-          </button>
+          </a>
         </div>
       </header>
 
@@ -119,21 +120,12 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="relative py-24 mt-auto">
+      <section id="newsletter" className="relative py-24 mt-auto">
         <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 skew-y-3 transform origin-bottom-right"></div>
         <div className="relative mx-auto max-w-2xl px-4 text-center">
           <h2 className="mb-4 text-4xl font-bold text-white">Never Miss a Post</h2>
           <p className="mb-8 text-green-100">Join our newsletter and get the latest articles delivered straight to your inbox.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full max-w-sm rounded-full px-6 py-3 text-gray-900 shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
-            />
-            <button className="px-8 py-3 bg-white text-green-600 rounded-full font-medium hover:bg-gray-100 transition-colors shadow-xl hover:scale-105 transform transition-transform duration-200">
-              Subscribe
-            </button>
-          </div>
+          <NewsletterSubscription />
         </div>
       </section>
     </div>
